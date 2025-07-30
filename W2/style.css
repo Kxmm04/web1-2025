@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  height: 40px;
+}
+
+.order-type label {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.menu-bar {
+  background: #111;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.menu-scroll {
+  display: flex;
+}
+
+.menu-scroll button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-scroll button.active,
+.menu-scroll button:hover {
+  background: #c00;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 15px;
+}
+
+.price-row {
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.old {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn.add {
+  background: #d1001c;
+  color: white;
+}
+
+.btn.promo {
+  background: #fff;
+  color: #d1001c;
+  border: 2px solid #d1001c;
+}
+
+@media screen and (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-scroll {
+    overflow-x: scroll;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+}
